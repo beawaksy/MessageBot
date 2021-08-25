@@ -2,20 +2,20 @@ from pynput.keyboard import Key, Controller
 keyboard = Controller()
 import time
 
-spam = input("spam mesajını girin ==> ")
-count = input("spam mesajını kaç kere yazdırmak istediğinizi girin ==> ")
-
+spam = input("Enter the message you want ==> ")
+count = input("How many times to message ==> ")
+a = input("Enter waiting time ==> ")
 countdown = 5
 while (countdown != 0):
     print(countdown)
     countdown = countdown - 1
-    time.sleep(0.1)
+    time.sleep(a)
 
 spamCount = 1
 while (spamCount != count):
-    time.sleep(1)
+    time.sleep(a)
     keyboard.type(spam)
     keyboard.press(Key.enter)
     spamCount = spamCount + 1
 
-print("done :3")
+print("finito :3")
